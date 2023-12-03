@@ -8,14 +8,14 @@ class CubeConundrumPartOne {
     val input = ResourceFile.read(INPUT_PATH)
 }
 
-
-
-class CubeConundrumGame(
+class CubeConundrum(
     private val redCubes: Int,
     private val greenCubes: Int,
     private val blueCubes: Int,
 ) {
-    fun isValid(subset: CubeConundrumSubset): Boolean {
+    fun isValid(game: Game): Boolean = game.revealedCubes.all(::isValid)
+
+    private fun isValid(subset: Subset): Boolean {
         val redCubes = subset.cubes.filterIsInstance<RedCube>().sumOf { it.times }
         val greenCubes = subset.cubes.filterIsInstance<GreenCube>().sumOf { it.times }
         val blueCubes = subset.cubes.filterIsInstance<BlueCube>().sumOf { it.times }
@@ -26,9 +26,12 @@ class CubeConundrumGame(
 
         return true
     }
+
+    class Game(val id: Int, vararg val revealedCubes: Subset)
+    class Subset(vararg val cubes: Cube)
 }
 
-class CubeConundrumSubset(vararg val cubes: Cube)
+
 
 sealed class Cube(val times: Int)
 class RedCube(times: Int): Cube(times)
