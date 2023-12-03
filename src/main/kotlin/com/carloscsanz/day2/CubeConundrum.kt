@@ -37,6 +37,7 @@ class CubeConundrum(
                 val redCubes = "([0-9]+) red".toRegex().findAll(line).map { it.groupValues[1] }.joinToString()
                 val greenCubes = "([0-9]+) green".toRegex().findAll(line).map { it.groupValues[1] }.joinToString()
                 val blueCubes = "([0-9]+) blue".toRegex().findAll(line).map { it.groupValues[1] }.joinToString()
+
                 val cubes = listOfNotNull(
                     if (redCubes.isEmpty()) null else RedCube(redCubes.toInt()),
                     if (greenCubes.isEmpty()) null else GreenCube(greenCubes.toInt()),
