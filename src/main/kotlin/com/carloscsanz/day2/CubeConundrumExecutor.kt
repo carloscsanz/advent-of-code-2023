@@ -9,16 +9,18 @@ fun main() {
 
     val cubeConundrum = CubeConundrum(redCubes = 12, greenCubes = 13, blueCubes = 14)
 
-    var sum = 0
+    var validIdSum = 0
+    var powerSum = 0
     input.bufferedReader().forEachLine { line ->
         val game = CubeConundrum.Game.from(line)
 
-        if (cubeConundrum.isValid(game)) {
-            sum += game.id
-        } else {
-            println("Line not valid: $line")
-        }
+        // FIRST PART
+        if (cubeConundrum.isValid(game)) validIdSum += game.id
+
+        // SECOND PART
+        powerSum += game.power
     }
 
-    println("Answer: $sum")
+    println("PART 1 - Answer: $validIdSum")
+    println("PART 2 - Answer: $powerSum")
 }
