@@ -1,4 +1,4 @@
-package com.carloscsanz.dayOne
+package com.carloscsanz.day1
 
 private const val ONE = '1'
 private const val TWO = '2'

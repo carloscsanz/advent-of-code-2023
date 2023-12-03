@@ -1,4 +1,4 @@
-package com.carloscsanz.dayOne
+package com.carloscsanz.day1
 
 fun main() {
     val fileName ="/1-trebuchet/calibration.txt"
@@ -7,11 +7,11 @@ fun main() {
 
     var sum = 0
     inputStream.bufferedReader().forEachLine { line ->
-        val calibration = PartTwoCalibrationCalculator.getCalibration(line)
+        val calibration = PartOneCalibrationCalculator.getCalibration(line)
 
         sum += calibration
     }
 
+    // Your puzzle answer was 53080.
     println("Answer: $sum")
-    // Mal: 53188
 }
