@@ -14,6 +14,10 @@ class PartTwoCalibrationCalculatorTest {
         "4nineeightseven2, 42",
         "zoneight234, 14",
         "7pqrstsixteen, 76",
+        "eight9fhstbssrplmdlncmmqqnklb39ninejz, 89",
+        "ppjvndvknbtpfsncplmhhrlh5, 55",
+        "mqtwooneeight7sevenfourht, 24",
+        "qkpbblqtk6fourvgvdvnsdhnktgqzhxrm, 64"
     )
     fun `should get the calibration number`(line: String, expected: Int) {
         val actual = PartTwoCalibrationCalculator.getCalibration(line)

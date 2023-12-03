@@ -1,6 +1,6 @@
 package com.carloscsanz.dayOne
 
-private val numbers = setOf('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
+private val numbers = setOf('1', '2', '3', '4', '5', '6', '7', '8', '9')
 
 object PartOneCalibrationCalculator {
 
