@@ -1,7 +1,7 @@
 package com.carloscsanz.dayOne
 
 fun main() {
-    val fileName ="/day-1-calibration/calibration.txt"
+    val fileName ="/1-trebuchet/calibration.txt"
     val inputStream = object {}.javaClass.getResourceAsStream(fileName)
         ?: throw Exception("Resource $fileName not found")
 
