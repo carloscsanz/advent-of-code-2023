@@ -19,9 +19,9 @@ class PartTwoCalibrationCalculatorTest {
         "mqtwooneeight7sevenfourht, 24",
         "qkpbblqtk6fourvgvdvnsdhnktgqzhxrm, 64"
     )
-    fun `should get the calibration number`(line: String, expected: Int) {
-        val actual = PartTwoCalibrationCalculator.getCalibration(line)
+    fun `should get the calibration number`(line: String, expected: Long) {
+        val actual = CalibrationLine(line)
 
-        assert(actual == expected)
+        assert(expected == actual.complexCalibration)
     }
 }
