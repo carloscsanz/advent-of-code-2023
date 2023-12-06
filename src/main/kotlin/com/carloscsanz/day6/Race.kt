@@ -29,7 +29,7 @@ fun main() {
 
     val solution = races.map { it.winningAttempts }.reduce { a, b -> a * b }
 
-    println("Answer is: $solution")
+    println("PART 1 (Example) - Answer is: $solution")
 
 //    Time:        46     85     75     82
 //    Distance:   208   1412   1257   1410
@@ -43,7 +43,7 @@ fun main() {
 
     val firsPartSolution = officialRaces.map { it.winningAttempts }.reduce { a, b -> a * b }
 
-    println("Answer is: $firsPartSolution")
+    println("PART 1 - Answer is: $firsPartSolution")
 
 
 //    Time:      71530
@@ -53,7 +53,7 @@ fun main() {
 
     val partTwoExampleSolution = partTwoExampleRace.winningAttempts
 
-    println("Answer is: $partTwoExampleSolution")
+    println("PART 2 (Example) - Answer is: $partTwoExampleSolution")
 
 //    Time:        46857582
 //    Distance:   208141212571410
@@ -62,6 +62,6 @@ fun main() {
 
     val partTwoSolution = partTwoRace.winningAttempts
 
-    println("Answer is: $partTwoSolution")
+    println("PART 2 - Answer is: $partTwoSolution")
 
 }
