@@ -1,19 +1,5 @@
 package com.carloscsanz.day7.partOne
 
-import com.carloscsanz.day7.partTwo.A
-import com.carloscsanz.day7.partTwo.Eight
-import com.carloscsanz.day7.partTwo.Five
-import com.carloscsanz.day7.partTwo.Four
-import com.carloscsanz.day7.partTwo.J
-import com.carloscsanz.day7.partTwo.K
-import com.carloscsanz.day7.partTwo.Nine
-import com.carloscsanz.day7.partTwo.Q
-import com.carloscsanz.day7.partTwo.Seven
-import com.carloscsanz.day7.partTwo.Six
-import com.carloscsanz.day7.partTwo.T
-import com.carloscsanz.day7.partTwo.Three
-import com.carloscsanz.day7.partTwo.Two
-
 sealed class PartOneCard(private val size: Int): Comparable<PartOneCard> {
     companion object {
         fun of(card: String): PartOneCard {

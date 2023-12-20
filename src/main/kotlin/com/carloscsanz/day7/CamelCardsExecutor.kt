@@ -12,16 +12,31 @@ fun main() {
     val cards = input
         .bufferedReader()
         .lineSequence()
-        .map { line -> line.parseLine() }
+        .map { line ->
+            val round = line.parseLine()
+
+            println("$line - ${round.partTwoHand.javaClass.simpleName}")
+
+            round
+        }
+        .toList()
 
     // FIRST PART
     val partOneSum = cards
+        .asSequence()
         .sortedBy { it.partOneHand }
         .mapIndexed { index, gameRound -> (index + 1) * gameRound.bid }
         .sum()
 
+    // FIRST PART
+    val partTwoSum = cards
+        .asSequence()
+        .sortedBy { it.partTwoHand }
+        .mapIndexed { index, gameRound -> (index + 1) * gameRound.bid }
+        .sum()
+
     println("PART 1 - Answer: $partOneSum") // Your puzzle answer was 251216224.
-    // println("PART 2 - Answer: $partTwoSum") // Your puzzle answer was 53268.
+    println("PART 2 - Answer: $partTwoSum") // Your puzzle answer was 250825971.
 }
 
 data class GameRound(
@@ -33,7 +48,8 @@ data class GameRound(
 private fun String.parseLine(): GameRound {
     val parts = split(" ")
     val partOneHand = PartOneHand.from(parts.first())
+    val partTwoHand = Hand.from(parts.first())
     val bid = parts.last().toInt()
 
-    return GameRound(partOneHand, bid)
+    return GameRound(partOneHand, partTwoHand, bid)
 }
