@@ -1,5 +1,18 @@
-package com.carloscsanz.day7
+package com.carloscsanz.day7.partOne
 
+import com.carloscsanz.day7.partTwo.A
+import com.carloscsanz.day7.partTwo.Eight
+import com.carloscsanz.day7.partTwo.Five
+import com.carloscsanz.day7.partTwo.Four
+import com.carloscsanz.day7.partTwo.J
+import com.carloscsanz.day7.partTwo.K
+import com.carloscsanz.day7.partTwo.Nine
+import com.carloscsanz.day7.partTwo.Q
+import com.carloscsanz.day7.partTwo.Seven
+import com.carloscsanz.day7.partTwo.Six
+import com.carloscsanz.day7.partTwo.T
+import com.carloscsanz.day7.partTwo.Three
+import com.carloscsanz.day7.partTwo.Two
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
@@ -7,268 +20,268 @@ import org.junit.jupiter.params.provider.CsvSource
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
-class CardTest {
+class PartOneCardTest {
 
     @Nested
-    inner class CardATest {
+    inner class PartOneCardATest {
 
         private val card = A
 
         @ParameterizedTest
         @CsvSource("K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("A")
+            val other = PartOneCard.of("A")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardKTest {
+    inner class PartOneCardKTest {
 
         private val card = K
 
         @ParameterizedTest
         @CsvSource("Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("K")
+            val other = PartOneCard.of("K")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardQTest {
+    inner class PartOneCardQTest {
 
         private val card = Q
 
         @ParameterizedTest
         @CsvSource("J", "T", "9", "8", "7", "6", "5", "4", "3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("Q")
+            val other = PartOneCard.of("Q")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardJTest {
+    inner class PartOneCardJTest {
 
         private val card = J
 
         @ParameterizedTest
         @CsvSource("T", "9", "8", "7", "6", "5", "4", "3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("J")
+            val other = PartOneCard.of("J")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardTTest {
+    inner class PartOneCardTTest {
 
         private val card = T
 
         @ParameterizedTest
         @CsvSource("9", "8", "7", "6", "5", "4", "3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("T")
+            val other = PartOneCard.of("T")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardNineTest {
+    inner class PartOneCardNineTest {
 
         private val card = Nine
 
         @ParameterizedTest
         @CsvSource("8", "7", "6", "5", "4", "3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("9")
+            val other = PartOneCard.of("9")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardEightTest {
+    inner class PartOneCardEightTest {
 
         private val card = Eight
 
         @ParameterizedTest
         @CsvSource("7", "6", "5", "4", "3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("8")
+            val other = PartOneCard.of("8")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardSevenTest {
+    inner class PartOneCardSevenTest {
 
         private val card = Seven
 
         @ParameterizedTest
         @CsvSource("6", "5", "4", "3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("7")
+            val other = PartOneCard.of("7")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardSixTest {
+    inner class PartOneCardSixTest {
 
         private val card = Six
 
         @ParameterizedTest
         @CsvSource("5", "4", "3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("6")
+            val other = PartOneCard.of("6")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardFiveTest {
+    inner class PartOneCardFiveTest {
 
         private val card = Five
 
         @ParameterizedTest
         @CsvSource("4", "3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("5")
+            val other = PartOneCard.of("5")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardFourTest {
+    inner class PartOneCardFourTest {
 
         private val card = Four
 
         @ParameterizedTest
         @CsvSource("3", "2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("4")
+            val other = PartOneCard.of("4")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardThreeTest {
+    inner class PartOneCardThreeTest {
 
         private val card = Three
 
         @ParameterizedTest
         @CsvSource("2")
         fun `card is bigger than the rest`(value: String) {
-            val other = Card.of(value)
+            val other = PartOneCard.of(value)
 
             assertTrue(card > other)
         }
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("3")
+            val other = PartOneCard.of("3")
 
             assertEquals(card, other)
         }
     }
 
     @Nested
-    inner class CardTwoTest {
+    inner class PartOneCardTwoTest {
 
         private val card = Two
 
         @Test
         fun `card should be equal the same card`() {
-            val other = Card.of("2")
+            val other = PartOneCard.of("2")
 
             assertEquals(card, other)
         }

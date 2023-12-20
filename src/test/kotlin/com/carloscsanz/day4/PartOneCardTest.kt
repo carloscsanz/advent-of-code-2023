@@ -3,7 +3,7 @@ package com.carloscsanz.day4
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
-class CardTest {
+class PartOneCardTest {
 
     // Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
     // Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1

@@ -1,11 +1,13 @@
-package com.carloscsanz.day7
+package com.carloscsanz.day7.partOne
 
+import com.carloscsanz.day7.partTwo.FiveOfAKind
+import com.carloscsanz.day7.partTwo.K
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 
-class HandTest {
+class PartOneHandTest {
 
     @Nested
     inner class FiveOfAKindTest {
@@ -14,21 +16,21 @@ class HandTest {
 
         @Test
         fun `hand is bigger than other`() {
-            val other = Hand.from("QQQQQ")
+            val other = PartOneHand.from("QQQQQ")
 
             assertTrue(hand > other)
         }
 
         @Test
         fun `hand should be equal the same hand`() {
-            val other = Hand.from("KKKKK")
+            val other = PartOneHand.from("KKKKK")
 
             assertEquals(hand, other)
         }
 
         @Test
         fun `hand should be smaller than other`() {
-            val other = Hand.from("AAAAA")
+            val other = PartOneHand.from("AAAAA")
 
             assertTrue(hand < other)
         }
